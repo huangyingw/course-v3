@@ -159,6 +159,7 @@
 "./fastai-video-browser/src/index.js"
 "./fastai-video-browser/src/utils/hash.js"
 "./fastai-video-browser/src/utils/time.js"
+"./fav.log.sort"
 "./files/dl-2019/notes/notes-1-1-CN.md"
 "./files/dl-2019/notes/notes-1-1.md"
 "./files/dl-2019/notes/notes-1-2-CN.md"

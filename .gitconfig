@@ -1,13 +1,13 @@
-[remote "authorVar"]
-    url = urlVar
-    fetch = +refs/heads/*:refs/remotes/authorVar/*
+[remote "fastai"]
+    url = git@github.com:fastai/course-v3.git
+    fetch = +refs/heads/*:refs/remotes/fastai/*
 [remote "origin"]
-    url = git@github.com:huangyingw/repoVar.git
+    url = git@github.com:huangyingw/fastai/course-v3.git
     fetch = +refs/heads/*:refs/remotes/origin/*
 [push]
     remote = origin
 [gsync]
-    remote = authorVar
+    remote = fastai
     branch = master
 [merge]
     allow = true
