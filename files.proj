@@ -193,6 +193,7 @@
 "./files/dl-2019/transcripts/transcript-1-6.json"
 "./files/dl-2019/transcripts/transcript-1-7.json"
 "./includefile.conf"
+"./install_fastai.sh"
 "./nbs/.gitignore"
 "./nbs/dl1/00_notebook_tutorial.ipynb"
 "./nbs/dl1/crappify.py"
