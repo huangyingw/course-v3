@@ -1,0 +1,1564 @@
+diff --git a/docs/production/lesson-1-export-jit.ipynb b/docs/production/lesson-1-export-jit.ipynb
+index 212d191..93fe944 100644
+--- ./docs/production/lesson-1-export-jit.ipynb
++++ ./docs/production/lesson-1-export-jit.ipynb
+@@ -236,6 +236,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/install_fastai.sh b/install_fastai.sh
+new file mode 100755
+index 0000000..09a9a1e
+--- /dev/null
++++ ./install_fastai.sh
+@@ -0,0 +1,10 @@
++#!/bin/zsh
++SCRIPT=$(realpath "$0")
++SCRIPTPATH=$(dirname "$SCRIPT")
++cd "$SCRIPTPATH"
++
++conda update conda
++conda install -c pytorch -c fastai fastai pytorch
++conda install -c conda-forge \
++    jupytext \
++    neovim
+diff --git a/nbs/dl1/00_notebook_tutorial.ipynb b/nbs/dl1/00_notebook_tutorial.ipynb
+index 3ea1120..617548a 100644
+--- ./nbs/dl1/00_notebook_tutorial.ipynb
++++ ./nbs/dl1/00_notebook_tutorial.ipynb
+@@ -785,10 +785,25 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+    "name": "python3"
++  },
++  "language_info": {
++   "codemirror_mode": {
++    "name": "ipython",
++    "version": 3
++   },
++   "file_extension": ".py",
++   "mimetype": "text/x-python",
++   "name": "python",
++   "nbconvert_exporter": "python",
++   "pygments_lexer": "ipython3",
++   "version": "3.6.10"
+   }
+  },
+  "nbformat": 4,
+diff --git a/nbs/dl1/lesson1-pets.ipynb b/nbs/dl1/lesson1-pets.ipynb
+index ab39137..00e261e 100644
+--- ./nbs/dl1/lesson1-pets.ipynb
++++ ./nbs/dl1/lesson1-pets.ipynb
+@@ -20,9 +20,22 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": null,
++   "execution_count": 1,
+    "metadata": {},
+-   "outputs": [],
++   "outputs": [
++    {
++     "name": "stderr",
++     "output_type": "stream",
++     "text": [
++      "\n",
++      "Bad key \"text.kerning_factor\" on line 4 in\n",
++      "/root/anaconda3/envs/fastai/lib/python3.6/site-packages/matplotlib/mpl-data/stylelib/_classic_test_patch.mplstyle.\n",
++      "You probably need to get an updated matplotlibrc file from\n",
++      "http://github.com/matplotlib/matplotlib/blob/master/matplotlibrc.template\n",
++      "or from the matplotlib source distribution\n"
++     ]
++    }
++   ],
+    "source": [
+     "%reload_ext autoreload\n",
+     "%autoreload 2\n",
+@@ -38,7 +51,7 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": null,
++   "execution_count": 2,
+    "metadata": {},
+    "outputs": [],
+    "source": [
+@@ -1328,10 +1341,25 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+    "name": "python3"
++  },
++  "language_info": {
++   "codemirror_mode": {
++    "name": "ipython",
++    "version": 3
++   },
++   "file_extension": ".py",
++   "mimetype": "text/x-python",
++   "name": "python",
++   "nbconvert_exporter": "python",
++   "pygments_lexer": "ipython3",
++   "version": "3.6.10"
+   }
+  },
+  "nbformat": 4,
+diff --git a/nbs/dl1/lesson2-download.ipynb b/nbs/dl1/lesson2-download.ipynb
+index 5e612b0..7ab109f 100644
+--- ./nbs/dl1/lesson2-download.ipynb
++++ ./nbs/dl1/lesson2-download.ipynb
+@@ -1403,6 +1403,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl1/lesson2-sgd.ipynb b/nbs/dl1/lesson2-sgd.ipynb
+index bfd48f5..7eeda76 100644
+--- ./nbs/dl1/lesson2-sgd.ipynb
++++ ./nbs/dl1/lesson2-sgd.ipynb
+@@ -18648,6 +18648,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl1/lesson3-camvid-tiramisu.ipynb b/nbs/dl1/lesson3-camvid-tiramisu.ipynb
+index 174121a..c3dfb1d 100644
+--- ./nbs/dl1/lesson3-camvid-tiramisu.ipynb
++++ ./nbs/dl1/lesson3-camvid-tiramisu.ipynb
+@@ -1300,6 +1300,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl1/lesson3-camvid.ipynb b/nbs/dl1/lesson3-camvid.ipynb
+index 261f54e..09c344c 100644
+--- ./nbs/dl1/lesson3-camvid.ipynb
++++ ./nbs/dl1/lesson3-camvid.ipynb
+@@ -1062,6 +1062,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl1/lesson3-head-pose.ipynb b/nbs/dl1/lesson3-head-pose.ipynb
+index a0b5241..5fb60bd 100644
+--- ./nbs/dl1/lesson3-head-pose.ipynb
++++ ./nbs/dl1/lesson3-head-pose.ipynb
+@@ -453,6 +453,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl1/lesson3-imdb.ipynb b/nbs/dl1/lesson3-imdb.ipynb
+index fdafed7..9aeafcc 100644
+--- ./nbs/dl1/lesson3-imdb.ipynb
++++ ./nbs/dl1/lesson3-imdb.ipynb
+@@ -1285,6 +1285,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl1/lesson3-planet.ipynb b/nbs/dl1/lesson3-planet.ipynb
+index d669923..1977526 100644
+--- ./nbs/dl1/lesson3-planet.ipynb
++++ ./nbs/dl1/lesson3-planet.ipynb
+@@ -1019,6 +1019,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl1/lesson4-collab.ipynb b/nbs/dl1/lesson4-collab.ipynb
+index 516dd68..755c60d 100644
+--- ./nbs/dl1/lesson4-collab.ipynb
++++ ./nbs/dl1/lesson4-collab.ipynb
+@@ -1257,6 +1257,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl1/lesson4-tabular.ipynb b/nbs/dl1/lesson4-tabular.ipynb
+index 59484e1..7eb3e28 100644
+--- ./nbs/dl1/lesson4-tabular.ipynb
++++ ./nbs/dl1/lesson4-tabular.ipynb
+@@ -321,6 +321,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl1/lesson5-sgd-mnist.ipynb b/nbs/dl1/lesson5-sgd-mnist.ipynb
+index 7fb5d6a..4193729 100644
+--- ./nbs/dl1/lesson5-sgd-mnist.ipynb
++++ ./nbs/dl1/lesson5-sgd-mnist.ipynb
+@@ -651,6 +651,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl1/lesson6-pets-more.ipynb b/nbs/dl1/lesson6-pets-more.ipynb
+index 792cfbd..bbb0a19 100644
+--- ./nbs/dl1/lesson6-pets-more.ipynb
++++ ./nbs/dl1/lesson6-pets-more.ipynb
+@@ -1333,6 +1333,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl1/lesson6-rossmann.ipynb b/nbs/dl1/lesson6-rossmann.ipynb
+index 21e1d3f..21c6d11 100644
+--- ./nbs/dl1/lesson6-rossmann.ipynb
++++ ./nbs/dl1/lesson6-rossmann.ipynb
+@@ -1779,6 +1779,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl1/lesson7-human-numbers.ipynb b/nbs/dl1/lesson7-human-numbers.ipynb
+index 932284c..343f583 100644
+--- ./nbs/dl1/lesson7-human-numbers.ipynb
++++ ./nbs/dl1/lesson7-human-numbers.ipynb
+@@ -1488,6 +1488,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl1/lesson7-resnet-mnist.ipynb b/nbs/dl1/lesson7-resnet-mnist.ipynb
+index 556ef41..61816bb 100644
+--- ./nbs/dl1/lesson7-resnet-mnist.ipynb
++++ ./nbs/dl1/lesson7-resnet-mnist.ipynb
+@@ -1157,6 +1157,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl1/lesson7-superres-gan.ipynb b/nbs/dl1/lesson7-superres-gan.ipynb
+index dd9658f..44059f4 100644
+--- ./nbs/dl1/lesson7-superres-gan.ipynb
++++ ./nbs/dl1/lesson7-superres-gan.ipynb
+@@ -1119,6 +1119,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl1/lesson7-superres-imagenet.ipynb b/nbs/dl1/lesson7-superres-imagenet.ipynb
+index 5da63c6..9f1aaa4 100644
+--- ./nbs/dl1/lesson7-superres-imagenet.ipynb
++++ ./nbs/dl1/lesson7-superres-imagenet.ipynb
+@@ -517,6 +517,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl1/lesson7-superres.ipynb b/nbs/dl1/lesson7-superres.ipynb
+index fffab3b..479abaf 100644
+--- ./nbs/dl1/lesson7-superres.ipynb
++++ ./nbs/dl1/lesson7-superres.ipynb
+@@ -1291,6 +1291,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl1/lesson7-wgan.ipynb b/nbs/dl1/lesson7-wgan.ipynb
+index 0280f75..e596de5 100644
+--- ./nbs/dl1/lesson7-wgan.ipynb
++++ ./nbs/dl1/lesson7-wgan.ipynb
+@@ -412,6 +412,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl1/rossman_data_clean.ipynb b/nbs/dl1/rossman_data_clean.ipynb
+index dc42ffd..c70ce1b 100644
+--- ./nbs/dl1/rossman_data_clean.ipynb
++++ ./nbs/dl1/rossman_data_clean.ipynb
+@@ -1040,6 +1040,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/00_exports.ipynb b/nbs/dl2/00_exports.ipynb
+index 3e065bd..d91ca48 100644
+--- ./nbs/dl2/00_exports.ipynb
++++ ./nbs/dl2/00_exports.ipynb
+@@ -61,6 +61,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/01_matmul.ipynb b/nbs/dl2/01_matmul.ipynb
+index c9d5995..ee91e3f 100644
+--- ./nbs/dl2/01_matmul.ipynb
++++ ./nbs/dl2/01_matmul.ipynb
+@@ -1641,6 +1641,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/02_fully_connected.ipynb b/nbs/dl2/02_fully_connected.ipynb
+index 0f225ac..a11df3e 100644
+--- ./nbs/dl2/02_fully_connected.ipynb
++++ ./nbs/dl2/02_fully_connected.ipynb
+@@ -1368,6 +1368,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/02a_why_sqrt5.ipynb b/nbs/dl2/02a_why_sqrt5.ipynb
+index 1974190..09d44b7 100644
+--- ./nbs/dl2/02a_why_sqrt5.ipynb
++++ ./nbs/dl2/02a_why_sqrt5.ipynb
+@@ -708,6 +708,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/02b_initializing.ipynb b/nbs/dl2/02b_initializing.ipynb
+index 78e41db..977f85b 100644
+--- ./nbs/dl2/02b_initializing.ipynb
++++ ./nbs/dl2/02b_initializing.ipynb
+@@ -510,6 +510,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/03_minibatch_training.ipynb b/nbs/dl2/03_minibatch_training.ipynb
+index b8d905f..87277e1 100644
+--- ./nbs/dl2/03_minibatch_training.ipynb
++++ ./nbs/dl2/03_minibatch_training.ipynb
+@@ -2081,6 +2081,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/04_callbacks.ipynb b/nbs/dl2/04_callbacks.ipynb
+index ea89662..521e23c 100644
+--- ./nbs/dl2/04_callbacks.ipynb
++++ ./nbs/dl2/04_callbacks.ipynb
+@@ -825,6 +825,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/05_anneal.ipynb b/nbs/dl2/05_anneal.ipynb
+index 716b1a8..9a57f21 100644
+--- ./nbs/dl2/05_anneal.ipynb
++++ ./nbs/dl2/05_anneal.ipynb
+@@ -540,6 +540,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/05a_foundations.ipynb b/nbs/dl2/05a_foundations.ipynb
+index 97cb4f5..ff2fe93 100644
+--- ./nbs/dl2/05a_foundations.ipynb
++++ ./nbs/dl2/05a_foundations.ipynb
+@@ -1493,6 +1493,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/05b_early_stopping.ipynb b/nbs/dl2/05b_early_stopping.ipynb
+index 0474440..40fe5a4 100644
+--- ./nbs/dl2/05b_early_stopping.ipynb
++++ ./nbs/dl2/05b_early_stopping.ipynb
+@@ -473,6 +473,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/06_cuda_cnn_hooks_init.ipynb b/nbs/dl2/06_cuda_cnn_hooks_init.ipynb
+index d69ab48..abea3ff 100644
+--- ./nbs/dl2/06_cuda_cnn_hooks_init.ipynb
++++ ./nbs/dl2/06_cuda_cnn_hooks_init.ipynb
+@@ -1856,6 +1856,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/07_batchnorm.ipynb b/nbs/dl2/07_batchnorm.ipynb
+index e53803c..5cd6c96 100644
+--- ./nbs/dl2/07_batchnorm.ipynb
++++ ./nbs/dl2/07_batchnorm.ipynb
+@@ -1045,6 +1045,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/07a_lsuv.ipynb b/nbs/dl2/07a_lsuv.ipynb
+index a33390e..85f684d 100644
+--- ./nbs/dl2/07a_lsuv.ipynb
++++ ./nbs/dl2/07a_lsuv.ipynb
+@@ -452,6 +452,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/08_data_block.ipynb b/nbs/dl2/08_data_block.ipynb
+index 31289d9..98ba5ab 100644
+--- ./nbs/dl2/08_data_block.ipynb
++++ ./nbs/dl2/08_data_block.ipynb
+@@ -1865,6 +1865,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/09_optimizers.ipynb b/nbs/dl2/09_optimizers.ipynb
+index 573dc02..72ee916 100644
+--- ./nbs/dl2/09_optimizers.ipynb
++++ ./nbs/dl2/09_optimizers.ipynb
+@@ -1317,6 +1317,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/09b_learner.ipynb b/nbs/dl2/09b_learner.ipynb
+index faa8068..a1de51d 100644
+--- ./nbs/dl2/09b_learner.ipynb
++++ ./nbs/dl2/09b_learner.ipynb
+@@ -422,6 +422,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/09c_add_progress_bar.ipynb b/nbs/dl2/09c_add_progress_bar.ipynb
+index 8bada8e..0190b65 100644
+--- ./nbs/dl2/09c_add_progress_bar.ipynb
++++ ./nbs/dl2/09c_add_progress_bar.ipynb
+@@ -301,6 +301,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/10_augmentation.ipynb b/nbs/dl2/10_augmentation.ipynb
+index b06d393..1fe498d 100644
+--- ./nbs/dl2/10_augmentation.ipynb
++++ ./nbs/dl2/10_augmentation.ipynb
+@@ -2336,6 +2336,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/10b_mixup_label_smoothing.ipynb b/nbs/dl2/10b_mixup_label_smoothing.ipynb
+index 974da20..b1bed92 100644
+--- ./nbs/dl2/10b_mixup_label_smoothing.ipynb
++++ ./nbs/dl2/10b_mixup_label_smoothing.ipynb
+@@ -522,6 +522,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/10c_fp16.ipynb b/nbs/dl2/10c_fp16.ipynb
+index 996aae4..bf071f2 100644
+--- ./nbs/dl2/10c_fp16.ipynb
++++ ./nbs/dl2/10c_fp16.ipynb
+@@ -1022,6 +1022,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/11_train_imagenette.ipynb b/nbs/dl2/11_train_imagenette.ipynb
+index 3480188..08b41f4 100644
+--- ./nbs/dl2/11_train_imagenette.ipynb
++++ ./nbs/dl2/11_train_imagenette.ipynb
+@@ -643,6 +643,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/11a_transfer_learning.ipynb b/nbs/dl2/11a_transfer_learning.ipynb
+index 3c285fd..0ba9321 100644
+--- ./nbs/dl2/11a_transfer_learning.ipynb
++++ ./nbs/dl2/11a_transfer_learning.ipynb
+@@ -924,6 +924,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/12_text.ipynb b/nbs/dl2/12_text.ipynb
+index 08fc7f7..de5c72a 100644
+--- ./nbs/dl2/12_text.ipynb
++++ ./nbs/dl2/12_text.ipynb
+@@ -1597,6 +1597,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/12a_awd_lstm.ipynb b/nbs/dl2/12a_awd_lstm.ipynb
+index 319b26a..b28b9a5 100644
+--- ./nbs/dl2/12a_awd_lstm.ipynb
++++ ./nbs/dl2/12a_awd_lstm.ipynb
+@@ -1185,6 +1185,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/12b_lm_pretrain.ipynb b/nbs/dl2/12b_lm_pretrain.ipynb
+index 6a959fc..a99fd64 100644
+--- ./nbs/dl2/12b_lm_pretrain.ipynb
++++ ./nbs/dl2/12b_lm_pretrain.ipynb
+@@ -294,6 +294,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/12c_ulmfit.ipynb b/nbs/dl2/12c_ulmfit.ipynb
+index 40731eb..a926629 100644
+--- ./nbs/dl2/12c_ulmfit.ipynb
++++ ./nbs/dl2/12c_ulmfit.ipynb
+@@ -1243,6 +1243,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/audio.ipynb b/nbs/dl2/audio.ipynb
+index 1a4b3a4..5d1cf9e 100644
+--- ./nbs/dl2/audio.ipynb
++++ ./nbs/dl2/audio.ipynb
+@@ -1247,6 +1247,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/bleu_metric.ipynb b/nbs/dl2/bleu_metric.ipynb
+index a789ebd..5f066de 100644
+--- ./nbs/dl2/bleu_metric.ipynb
++++ ./nbs/dl2/bleu_metric.ipynb
+@@ -264,6 +264,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/cyclegan.ipynb b/nbs/dl2/cyclegan.ipynb
+index bd0815b..2aee258 100644
+--- ./nbs/dl2/cyclegan.ipynb
++++ ./nbs/dl2/cyclegan.ipynb
+@@ -711,6 +711,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/cyclegan_ws.ipynb b/nbs/dl2/cyclegan_ws.ipynb
+index b2f05cd..0cba645 100644
+--- ./nbs/dl2/cyclegan_ws.ipynb
++++ ./nbs/dl2/cyclegan_ws.ipynb
+@@ -720,6 +720,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/devise.ipynb b/nbs/dl2/devise.ipynb
+index acddd0e..cbafd4f 100644
+--- ./nbs/dl2/devise.ipynb
++++ ./nbs/dl2/devise.ipynb
+@@ -860,6 +860,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/pascal.ipynb b/nbs/dl2/pascal.ipynb
+index 0ce9613..644f47c 100644
+--- ./nbs/dl2/pascal.ipynb
++++ ./nbs/dl2/pascal.ipynb
+@@ -1665,6 +1665,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/timing.ipynb b/nbs/dl2/timing.ipynb
+index 2351f29..e38654e 100644
+--- ./nbs/dl2/timing.ipynb
++++ ./nbs/dl2/timing.ipynb
+@@ -106,6 +106,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/transforms-dali.ipynb b/nbs/dl2/transforms-dali.ipynb
+index 1108e6b..3fb0a58 100644
+--- ./nbs/dl2/transforms-dali.ipynb
++++ ./nbs/dl2/transforms-dali.ipynb
+@@ -278,6 +278,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/translation.ipynb b/nbs/dl2/translation.ipynb
+index 1c0b71a..5b8fefc 100644
+--- ./nbs/dl2/translation.ipynb
++++ ./nbs/dl2/translation.ipynb
+@@ -2180,6 +2180,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/dl2/translation_transformer.ipynb b/nbs/dl2/translation_transformer.ipynb
+index bd2bddd..660cfa2 100644
+--- ./nbs/dl2/translation_transformer.ipynb
++++ ./nbs/dl2/translation_transformer.ipynb
+@@ -1552,6 +1552,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/nbs/swift/00_load_data.ipynb b/nbs/swift/00_load_data.ipynb
+index eabdccc..37a17b9 100644
+--- ./nbs/swift/00_load_data.ipynb
++++ ./nbs/swift/00_load_data.ipynb
+@@ -719,6 +719,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Swift",
+    "language": "swift",
+diff --git a/nbs/swift/00a_intro_and_float.ipynb b/nbs/swift/00a_intro_and_float.ipynb
+index d726e0f..a508fce 100644
+--- ./nbs/swift/00a_intro_and_float.ipynb
++++ ./nbs/swift/00a_intro_and_float.ipynb
+@@ -1316,6 +1316,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Swift",
+    "language": "swift",
+diff --git a/nbs/swift/01_matmul.ipynb b/nbs/swift/01_matmul.ipynb
+index 0e748af..9e960eb 100644
+--- ./nbs/swift/01_matmul.ipynb
++++ ./nbs/swift/01_matmul.ipynb
+@@ -1439,6 +1439,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Swift",
+    "language": "swift",
+diff --git a/nbs/swift/01a_fastai_layers.ipynb b/nbs/swift/01a_fastai_layers.ipynb
+index 71048e3..400cef1 100644
+--- ./nbs/swift/01a_fastai_layers.ipynb
++++ ./nbs/swift/01a_fastai_layers.ipynb
+@@ -766,6 +766,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Swift",
+    "language": "swift",
+diff --git a/nbs/swift/02_fully_connected.ipynb b/nbs/swift/02_fully_connected.ipynb
+index fd4ca60..ce0e4bf 100644
+--- ./nbs/swift/02_fully_connected.ipynb
++++ ./nbs/swift/02_fully_connected.ipynb
+@@ -1570,6 +1570,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Swift",
+    "language": "swift",
+diff --git a/nbs/swift/02a_why_sqrt5.ipynb b/nbs/swift/02a_why_sqrt5.ipynb
+index 810b543..c187b66 100644
+--- ./nbs/swift/02a_why_sqrt5.ipynb
++++ ./nbs/swift/02a_why_sqrt5.ipynb
+@@ -744,6 +744,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Swift",
+    "language": "swift",
+diff --git a/nbs/swift/02b_initializing.ipynb b/nbs/swift/02b_initializing.ipynb
+index 6b8ff3f..a5a4afa 100644
+--- ./nbs/swift/02b_initializing.ipynb
++++ ./nbs/swift/02b_initializing.ipynb
+@@ -568,6 +568,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Swift",
+    "language": "swift",
+diff --git a/nbs/swift/02c_autodiff.ipynb b/nbs/swift/02c_autodiff.ipynb
+index da79fb2..f5df908 100644
+--- ./nbs/swift/02c_autodiff.ipynb
++++ ./nbs/swift/02c_autodiff.ipynb
+@@ -471,6 +471,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Swift",
+    "language": "swift",
+diff --git a/nbs/swift/03_minibatch_training.ipynb b/nbs/swift/03_minibatch_training.ipynb
+index 11ce983..e50be21 100644
+--- ./nbs/swift/03_minibatch_training.ipynb
++++ ./nbs/swift/03_minibatch_training.ipynb
+@@ -1007,6 +1007,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Swift",
+    "language": "swift",
+diff --git a/nbs/swift/04_callbacks.ipynb b/nbs/swift/04_callbacks.ipynb
+index 77139d4..448df6d 100644
+--- ./nbs/swift/04_callbacks.ipynb
++++ ./nbs/swift/04_callbacks.ipynb
+@@ -973,6 +973,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Swift",
+    "language": "swift",
+diff --git a/nbs/swift/05_anneal.ipynb b/nbs/swift/05_anneal.ipynb
+index 37dca3e..c113982 100644
+--- ./nbs/swift/05_anneal.ipynb
++++ ./nbs/swift/05_anneal.ipynb
+@@ -878,6 +878,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Swift",
+    "language": "swift",
+diff --git a/nbs/swift/05b_early_stopping.ipynb b/nbs/swift/05b_early_stopping.ipynb
+index 952ee0e..69b20e3 100644
+--- ./nbs/swift/05b_early_stopping.ipynb
++++ ./nbs/swift/05b_early_stopping.ipynb
+@@ -567,6 +567,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Swift",
+    "language": "swift",
+diff --git a/nbs/swift/06_cuda.ipynb b/nbs/swift/06_cuda.ipynb
+index 0401127..11cc2e8 100644
+--- ./nbs/swift/06_cuda.ipynb
++++ ./nbs/swift/06_cuda.ipynb
+@@ -513,6 +513,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Swift",
+    "language": "swift",
+diff --git a/nbs/swift/07_batchnorm.ipynb b/nbs/swift/07_batchnorm.ipynb
+index 488d5ab..d656473 100644
+--- ./nbs/swift/07_batchnorm.ipynb
++++ ./nbs/swift/07_batchnorm.ipynb
+@@ -893,6 +893,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Swift",
+    "language": "swift",
+diff --git a/nbs/swift/07b_batchnorm_lesson.ipynb b/nbs/swift/07b_batchnorm_lesson.ipynb
+index 8f49d38..bfe61b8 100644
+--- ./nbs/swift/07b_batchnorm_lesson.ipynb
++++ ./nbs/swift/07b_batchnorm_lesson.ipynb
+@@ -422,6 +422,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Swift",
+    "language": "swift",
+diff --git a/nbs/swift/08_data_block.ipynb b/nbs/swift/08_data_block.ipynb
+index 6ae540b..3a2a31e 100644
+--- ./nbs/swift/08_data_block.ipynb
++++ ./nbs/swift/08_data_block.ipynb
+@@ -1180,6 +1180,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Swift",
+    "language": "swift",
+diff --git a/nbs/swift/08a_heterogeneous_dictionary.ipynb b/nbs/swift/08a_heterogeneous_dictionary.ipynb
+index 7330766..713ed26 100644
+--- ./nbs/swift/08a_heterogeneous_dictionary.ipynb
++++ ./nbs/swift/08a_heterogeneous_dictionary.ipynb
+@@ -277,6 +277,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Swift",
+    "language": "swift",
+diff --git a/nbs/swift/08b_data_block_opencv.ipynb b/nbs/swift/08b_data_block_opencv.ipynb
+index af1da44..b67b151 100644
+--- ./nbs/swift/08b_data_block_opencv.ipynb
++++ ./nbs/swift/08b_data_block_opencv.ipynb
+@@ -1249,6 +1249,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Swift",
+    "language": "swift",
+diff --git a/nbs/swift/08c_data_block-lightlyfunctional.ipynb b/nbs/swift/08c_data_block-lightlyfunctional.ipynb
+index 7c89a22..f6396cf 100644
+--- ./nbs/swift/08c_data_block-lightlyfunctional.ipynb
++++ ./nbs/swift/08c_data_block-lightlyfunctional.ipynb
+@@ -1128,6 +1128,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Swift",
+    "language": "swift",
+diff --git a/nbs/swift/08c_data_block_generic.ipynb b/nbs/swift/08c_data_block_generic.ipynb
+index 57f872b..4aaa5c2 100644
+--- ./nbs/swift/08c_data_block_generic.ipynb
++++ ./nbs/swift/08c_data_block_generic.ipynb
+@@ -1049,6 +1049,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Swift",
+    "language": "swift",
+diff --git a/nbs/swift/09_optimizer.ipynb b/nbs/swift/09_optimizer.ipynb
+index 669d029..002c18b 100644
+--- ./nbs/swift/09_optimizer.ipynb
++++ ./nbs/swift/09_optimizer.ipynb
+@@ -1591,6 +1591,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Swift",
+    "language": "swift",
+diff --git a/nbs/swift/10_mixup_ls.ipynb b/nbs/swift/10_mixup_ls.ipynb
+index 793aaec..95cec6f 100644
+--- ./nbs/swift/10_mixup_ls.ipynb
++++ ./nbs/swift/10_mixup_ls.ipynb
+@@ -504,6 +504,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Swift",
+    "language": "swift",
+diff --git a/nbs/swift/11_imagenette.ipynb b/nbs/swift/11_imagenette.ipynb
+index feb9cb3..41b10dd 100644
+--- ./nbs/swift/11_imagenette.ipynb
++++ ./nbs/swift/11_imagenette.ipynb
+@@ -719,6 +719,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Swift",
+    "language": "swift",
+diff --git a/nbs/swift/SwiftCV/Extra/Tests.ipynb b/nbs/swift/SwiftCV/Extra/Tests.ipynb
+index efe6cf7..f881c22 100644
+--- ./nbs/swift/SwiftCV/Extra/Tests.ipynb
++++ ./nbs/swift/SwiftCV/Extra/Tests.ipynb
+@@ -474,6 +474,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Swift",
+    "language": "swift",
+diff --git a/nbs/swift/audio.ipynb b/nbs/swift/audio.ipynb
+index fbf40d8..0d4f62f 100644
+--- ./nbs/swift/audio.ipynb
++++ ./nbs/swift/audio.ipynb
+@@ -935,6 +935,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Swift",
+    "language": "swift",
+diff --git a/nbs/swift/c_interop_examples.ipynb b/nbs/swift/c_interop_examples.ipynb
+index 87ab61c..ba4aa16 100644
+--- ./nbs/swift/c_interop_examples.ipynb
++++ ./nbs/swift/c_interop_examples.ipynb
+@@ -406,6 +406,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Swift",
+    "language": "swift",
+diff --git a/nbs/swift/opencv_integration_example.ipynb b/nbs/swift/opencv_integration_example.ipynb
+index 81e4ec9..695e0ee 100644
+--- ./nbs/swift/opencv_integration_example.ipynb
++++ ./nbs/swift/opencv_integration_example.ipynb
+@@ -803,6 +803,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Swift",
+    "language": "swift",
+diff --git a/setup.sh b/setup.sh
+new file mode 100755
+index 0000000..74a3fd2
+--- /dev/null
++++ ./setup.sh
+@@ -0,0 +1,6 @@
++#!/bin/zsh
++SCRIPT=$(realpath "$0")
++SCRIPTPATH=$(dirname "$SCRIPT")
++cd "$SCRIPTPATH"
++
++find . -type f -name \*.ipynb -exec jupytext --set-formats ipynb,py {} \;
+diff --git a/zh-nbs/00_notebook_tutorial.ipynb b/zh-nbs/00_notebook_tutorial.ipynb
+index 964d636..ffa1ce8 100644
+--- ./zh-nbs/00_notebook_tutorial.ipynb
++++ ./zh-nbs/00_notebook_tutorial.ipynb
+@@ -1188,6 +1188,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/zh-nbs/Lesson1_pets.ipynb b/zh-nbs/Lesson1_pets.ipynb
+index 8675b1a..76ae3d7 100644
+--- ./zh-nbs/Lesson1_pets.ipynb
++++ ./zh-nbs/Lesson1_pets.ipynb
+@@ -1553,6 +1553,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/zh-nbs/Lesson2_download.ipynb b/zh-nbs/Lesson2_download.ipynb
+index 374c07a..8c973d4 100644
+--- ./zh-nbs/Lesson2_download.ipynb
++++ ./zh-nbs/Lesson2_download.ipynb
+@@ -1834,6 +1834,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/zh-nbs/Lesson2_sgd.ipynb b/zh-nbs/Lesson2_sgd.ipynb
+index 0c31a55..e312c85 100644
+--- ./zh-nbs/Lesson2_sgd.ipynb
++++ ./zh-nbs/Lesson2_sgd.ipynb
+@@ -18707,6 +18707,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/zh-nbs/Lesson3_camvid.ipynb b/zh-nbs/Lesson3_camvid.ipynb
+index 26dc15e..5151119 100644
+--- ./zh-nbs/Lesson3_camvid.ipynb
++++ ./zh-nbs/Lesson3_camvid.ipynb
+@@ -1057,6 +1057,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/zh-nbs/Lesson3_camvid_tiramisu.ipynb b/zh-nbs/Lesson3_camvid_tiramisu.ipynb
+index d148a92..db64e3b 100644
+--- ./zh-nbs/Lesson3_camvid_tiramisu.ipynb
++++ ./zh-nbs/Lesson3_camvid_tiramisu.ipynb
+@@ -1315,6 +1315,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/zh-nbs/Lesson3_head_pose.ipynb b/zh-nbs/Lesson3_head_pose.ipynb
+index 3f0391c..2133386 100644
+--- ./zh-nbs/Lesson3_head_pose.ipynb
++++ ./zh-nbs/Lesson3_head_pose.ipynb
+@@ -472,6 +472,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/zh-nbs/Lesson3_imdb.ipynb b/zh-nbs/Lesson3_imdb.ipynb
+index ab80cc0..5194b63 100644
+--- ./zh-nbs/Lesson3_imdb.ipynb
++++ ./zh-nbs/Lesson3_imdb.ipynb
+@@ -1368,6 +1368,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/zh-nbs/Lesson3_planet.ipynb b/zh-nbs/Lesson3_planet.ipynb
+index e99483f..e44d826 100644
+--- ./zh-nbs/Lesson3_planet.ipynb
++++ ./zh-nbs/Lesson3_planet.ipynb
+@@ -1065,6 +1065,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/zh-nbs/Lesson4_collab.ipynb b/zh-nbs/Lesson4_collab.ipynb
+index b73b8cd..6713733 100644
+--- ./zh-nbs/Lesson4_collab.ipynb
++++ ./zh-nbs/Lesson4_collab.ipynb
+@@ -1276,6 +1276,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/zh-nbs/Lesson4_tabular.ipynb b/zh-nbs/Lesson4_tabular.ipynb
+index 7ed21a1..e972c1a 100644
+--- ./zh-nbs/Lesson4_tabular.ipynb
++++ ./zh-nbs/Lesson4_tabular.ipynb
+@@ -331,6 +331,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/zh-nbs/Lesson5_sgd_mnist.ipynb b/zh-nbs/Lesson5_sgd_mnist.ipynb
+index 9ebcbca..e1a99b0 100644
+--- ./zh-nbs/Lesson5_sgd_mnist.ipynb
++++ ./zh-nbs/Lesson5_sgd_mnist.ipynb
+@@ -670,6 +670,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/zh-nbs/Lesson6_pets_more.ipynb b/zh-nbs/Lesson6_pets_more.ipynb
+index b0839b0..1b1b8d5 100644
+--- ./zh-nbs/Lesson6_pets_more.ipynb
++++ ./zh-nbs/Lesson6_pets_more.ipynb
+@@ -1335,6 +1335,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/zh-nbs/Lesson6_rossmann.ipynb b/zh-nbs/Lesson6_rossmann.ipynb
+index 00bc3da..933b159 100644
+--- ./zh-nbs/Lesson6_rossmann.ipynb
++++ ./zh-nbs/Lesson6_rossmann.ipynb
+@@ -1795,6 +1795,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/zh-nbs/Lesson7_human_numbers.ipynb b/zh-nbs/Lesson7_human_numbers.ipynb
+index 6b618ec..e1b6838 100644
+--- ./zh-nbs/Lesson7_human_numbers.ipynb
++++ ./zh-nbs/Lesson7_human_numbers.ipynb
+@@ -1489,6 +1489,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/zh-nbs/Lesson7_resnet_mnist.ipynb b/zh-nbs/Lesson7_resnet_mnist.ipynb
+index 1089815..e1fd4af 100644
+--- ./zh-nbs/Lesson7_resnet_mnist.ipynb
++++ ./zh-nbs/Lesson7_resnet_mnist.ipynb
+@@ -1157,6 +1157,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/zh-nbs/Lesson7_superres.ipynb b/zh-nbs/Lesson7_superres.ipynb
+index d341f3c..7f9af5a 100644
+--- ./zh-nbs/Lesson7_superres.ipynb
++++ ./zh-nbs/Lesson7_superres.ipynb
+@@ -1305,6 +1305,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/zh-nbs/Lesson7_superres_gan.ipynb b/zh-nbs/Lesson7_superres_gan.ipynb
+index e61cc72..08c5fdc 100644
+--- ./zh-nbs/Lesson7_superres_gan.ipynb
++++ ./zh-nbs/Lesson7_superres_gan.ipynb
+@@ -1166,6 +1166,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/zh-nbs/Lesson7_superres_imagenet.ipynb b/zh-nbs/Lesson7_superres_imagenet.ipynb
+index 9fbcd79..6e0aace 100644
+--- ./zh-nbs/Lesson7_superres_imagenet.ipynb
++++ ./zh-nbs/Lesson7_superres_imagenet.ipynb
+@@ -531,6 +531,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
+diff --git a/zh-nbs/Lesson7_wgan.ipynb b/zh-nbs/Lesson7_wgan.ipynb
+index bed0d4b..7dec78c 100644
+--- ./zh-nbs/Lesson7_wgan.ipynb
++++ ./zh-nbs/Lesson7_wgan.ipynb
+@@ -518,6 +518,9 @@
+   }
+  ],
+  "metadata": {
++  "jupytext": {
++   "formats": "ipynb,py"
++  },
+   "kernelspec": {
+    "display_name": "Python 3",
+    "language": "python",
