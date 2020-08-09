@@ -42,6 +42,7 @@ export const VIDEO_SOURCES = {
   14: "8wd8zFzTG38",
 };
 
+
 export const LESSONS_NAMES = [{
   1: 'Lesson 1',
   2: 'Lesson 2',
