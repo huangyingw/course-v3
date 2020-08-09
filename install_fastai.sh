@@ -5,4 +5,6 @@ cd "$SCRIPTPATH"
 
 conda update conda
 conda install -c pytorch -c fastai fastai pytorch
-conda install -c conda-forge neovim
+conda install -c conda-forge \
+    jupytext \
+    neovim
